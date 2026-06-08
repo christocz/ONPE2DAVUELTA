@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Resultados Segunda Vuelta Perú 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;700&family=Source+Serif+4:wght@300;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--fp:#C0392B;--fp-l:#FDECEA;--jp:#1A56A0;--jp-l:#E3EEFF;--gold:#D97706;--dark:#0D1117;--bg:#F2F0EB;--card:#fff;--border:#E5E7EB;--muted:#6B7280;--subtle:#9CA3AF;}
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Source Serif 4',Georgia,serif;background:var(--bg);color:#111;min-height:100vh;}
+body{font-family:"Source Serif 4",Georgia,serif;background:var(--bg);color:#111;min-height:100vh;}
 header{background:var(--dark);color:#fff;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:100;}
-.h-eye{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:3px;}
-.h-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;}
-.h-ts{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#E5E7EB;}
-.h-tsl{font-size:9px;color:#6B7280;font-family:'IBM Plex Mono',monospace;}
+.h-eye{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:3px;}
+.h-title{font-family:"Bebas Neue",sans-serif;font-size:22px;letter-spacing:1px;}
+.h-ts{font-family:"IBM Plex Mono",monospace;font-size:11px;color:#E5E7EB;}
+.h-tsl{font-size:9px;color:#6B7280;font-family:"IBM Plex Mono",monospace;}
 main{max-width:1100px;margin:0 auto;padding:16px 14px 48px;}
 .alert{border-radius:10px;padding:11px 16px;margin-bottom:14px;display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.5;}
 .aw{background:#FEF3C7;border:1px solid #FCD34D;color:#92400E;}
+.ag{background:#ECFDF5;border:1px solid #6EE7B7;color:#065F46;}
 .top-grid{display:grid;grid-template-columns:148px 1fr;gap:14px;margin-bottom:14px;}
 @media(max-width:580px){.top-grid{grid-template-columns:1fr;}}
 .ring-card{background:var(--dark);border-radius:14px;padding:20px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
-.ring-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6B7280;margin-top:8px;text-align:center;line-height:1.5;}
+.ring-sub{font-family:"IBM Plex Mono",monospace;font-size:10px;color:#6B7280;margin-top:8px;text-align:center;line-height:1.5;}
 .score-card{background:var(--card);border-radius:14px;padding:18px 20px;box-shadow:0 1px 4px rgba(0,0,0,.07);}
 .tbrow{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;}
-.tbtn{padding:5px 14px;border-radius:20px;border:none;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;transition:all .2s;}
+.tbtn{padding:5px 14px;border-radius:20px;border:none;cursor:pointer;font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;transition:all .2s;}
 .tbtn.on{background:var(--dark);color:#fff;}.tbtn.off{background:#F3F4F6;color:var(--muted);}
 .tbtn.eon{border:1px solid var(--fp);background:var(--fp-l);color:var(--fp);}
 .tbtn.eoff{border:1px solid var(--border);background:#fff;color:var(--subtle);}
@@ -30,101 +31,89 @@ main{max-width:1100px;margin:0 auto;padding:16px 14px 48px;}
 .sbox{border-radius:10px;padding:11px 14px;}
 .sbox.fp{background:var(--fp-l);border-left:4px solid var(--fp);}
 .sbox.jp{background:var(--jp-l);border-left:4px solid var(--jp);}
-.slbl{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:1px;margin-bottom:6px;}
+.slbl{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:1px;margin-bottom:6px;}
 .slbl.fp{color:var(--fp);}.slbl.jp{color:var(--jp);}
-.dual-pct{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:6px;overflow:hidden;margin-bottom:4px;}
-.dual-col{padding:4px 0;}
-.dual-col.ya{padding-right:8px;border-right:1px solid rgba(0,0,0,0.08);}
+.dual-pct{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:4px;}
+.dual-col.ya{padding-right:8px;border-right:1px solid rgba(0,0,0,.08);}
 .dual-col.proj{padding-left:8px;}
-.dual-lbl{font-family:'IBM Plex Mono',monospace;font-size:8px;font-weight:700;letter-spacing:1px;margin-bottom:2px;}
+.dual-lbl{font-family:"IBM Plex Mono",monospace;font-size:8px;font-weight:700;letter-spacing:1px;margin-bottom:2px;}
 .dual-lbl.ya{color:var(--subtle);}.dual-lbl.fp-proj{color:var(--fp);}.dual-lbl.jp-proj{color:var(--jp);}
-.dual-num{font-family:'Bebas Neue',sans-serif;font-size:34px;line-height:1;}
+.dual-num{font-family:"Bebas Neue",sans-serif;font-size:34px;line-height:1;}
 .dual-num.ya{color:var(--subtle);}.dual-num.fp{color:var(--fp);}.dual-num.jp{color:var(--jp);}
-.srange{font-family:'IBM Plex Mono',monospace;font-size:10px;margin-bottom:2px;}
+.srange{font-family:"IBM Plex Mono",monospace;font-size:10px;margin-bottom:2px;}
 .srange.fp{color:var(--fp);}.srange.jp{color:var(--jp);}
-.svotes{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);}
+.svotes{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted);}
 .sbar{display:flex;height:32px;border-radius:6px;overflow:hidden;box-shadow:inset 0 1px 3px rgba(0,0,0,.12);}
 .sbar.sm{height:13px;}
 .bfp{background:var(--fp);display:flex;align-items:center;justify-content:center;transition:width .7s;}
 .bjp{background:var(--jp);display:flex;align-items:center;justify-content:center;transition:width .7s;}
-.blbl{color:#fff;font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:12px;}
+.blbl{color:#fff;font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:12px;}
 .err-wrap{margin-top:6px;position:relative;height:26px;}
 .err-track{position:absolute;left:0;right:0;top:6px;height:2px;background:var(--border);border-radius:2px;}
 .err-band{position:absolute;top:3px;height:8px;background:rgba(192,57,43,.18);border-radius:4px;border:1px dashed var(--fp);}
 .err-needle{position:absolute;top:1px;width:2px;height:12px;background:var(--fp);border-radius:1px;}
 .err-50{position:absolute;top:1px;width:1px;height:12px;background:var(--subtle);}
 .err-lbls{display:flex;justify-content:space-between;margin-top:17px;}
-.err-lbls span{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--subtle);}
+.err-lbls span{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--subtle);}
 .mrow{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;}
-.mrow .vfp{color:var(--fp);font-family:'IBM Plex Mono',monospace;font-weight:800;}
-.mrow .vgold{color:var(--gold);font-family:'IBM Plex Mono',monospace;font-weight:800;}
+.mrow .vfp{color:var(--fp);font-family:"IBM Plex Mono",monospace;font-weight:800;}
+.mrow .vgold{color:var(--gold);font-family:"IBM Plex Mono",monospace;font-weight:800;}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px;margin-bottom:14px;}
 .kpi{background:var(--card);border-radius:10px;padding:12px 14px;border-top:3px solid #ccc;box-shadow:0 1px 3px rgba(0,0,0,.06);}
-.klbl{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--subtle);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;}
-.kval{font-family:'Bebas Neue',sans-serif;font-size:26px;line-height:1.1;}
+.klbl{font-family:"IBM Plex Mono",monospace;font-size:9px;color:var(--subtle);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;}
+.kval{font-family:"Bebas Neue",sans-serif;font-size:26px;line-height:1.1;}
 .ksub{font-size:11px;color:var(--muted);margin-top:2px;}
 .section-card{background:var(--card);border-radius:14px;padding:20px 22px;box-shadow:0 1px 4px rgba(0,0,0,.07);margin-bottom:14px;}
 .sec-title{font-size:14px;font-weight:800;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
-.sec-lbl{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gold);margin-bottom:6px;}
+.sec-lbl{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gold);margin-bottom:6px;}
 .sec-p{font-size:13px;color:#374151;line-height:1.75;margin-bottom:14px;}
 .pend-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
 @media(max-width:540px){.pend-grid{grid-template-columns:1fr;}}
 .pbox{background:#F9FAFB;border-radius:10px;padding:12px 14px;}
 .pbox p{font-size:12px;color:#374151;line-height:1.65;margin:0;}
-.pbox-lbl{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;margin-bottom:4px;}
+.pbox-lbl{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;margin-bottom:4px;}
 .psumm{background:#F3F4F6;border-radius:8px;padding:10px 14px;margin-bottom:12px;}
 .concl{border-radius:10px;padding:12px 16px;}
 .concl.warn{background:#FFFBEB;border:1px solid #FDE68A;}
-.concl-lbl{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;color:#92400E;}
+.concl-lbl{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;color:#92400E;}
 .concl p{font-size:13px;line-height:1.7;margin:0;color:#92400E;}
 .steps{display:grid;gap:0;}
 .step{display:grid;grid-template-columns:36px 1fr;gap:14px;padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid var(--border);}
 .step:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
 .step-n{width:36px;height:36px;border-radius:8px;background:var(--dark);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.step-n span{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:800;color:var(--gold);}
+.step-n span{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:800;color:var(--gold);}
 .step-t{font-size:13px;font-weight:700;margin-bottom:4px;}
 .step-d{font-size:12px;color:var(--muted);line-height:1.7;}
 .ext-note{margin-top:16px;padding:12px 16px;background:#F5F3FF;border-radius:10px;border:1px solid #DDD6FE;}
-.ext-lbl{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:800;color:#5B21B6;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}
+.ext-lbl{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:800;color:#5B21B6;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}
 .ext-note p{font-size:12px;color:#4C1D95;line-height:1.7;margin:0;}
 .tcard{background:var(--card);border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.07);overflow:hidden;margin-bottom:14px;}
 .thead-row{padding:12px 18px 8px;border-bottom:1px solid #F3F4F6;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
 .ttitle{font-size:14px;font-weight:700;}
 .sort-row,.view-row2{display:flex;gap:6px;flex-wrap:wrap;padding:7px 18px;background:#FAFAFA;border-bottom:1px solid #F3F4F6;align-items:center;}
-.sort-lbl{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--subtle);margin-right:2px;}
-.sbtn{padding:3px 10px;border-radius:14px;border:1px solid var(--border);cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;background:#fff;color:var(--muted);}
+.sort-lbl{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--subtle);margin-right:2px;}
+.sbtn{padding:3px 10px;border-radius:14px;border:1px solid var(--border);cursor:pointer;font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;background:#fff;color:var(--muted);}
 .sbtn.on{background:var(--dark);color:#fff;border-color:var(--dark);}
-.vbtn{padding:3px 10px;border-radius:12px;border:none;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;background:#E5E7EB;color:var(--muted);}
+.vbtn{padding:3px 10px;border-radius:12px;border:none;cursor:pointer;font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;background:#E5E7EB;color:var(--muted);}
 .vbtn.on{background:var(--gold);color:#fff;}
 .twrap{overflow-x:auto;}
 table{width:100%;border-collapse:collapse;}
 thead tr{background:#F9FAFB;}
-th{padding:8px 11px;font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--subtle);font-weight:700;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap;text-align:center;}
+th{padding:8px 11px;font-family:"IBM Plex Mono",monospace;font-size:9px;color:var(--subtle);font-weight:700;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap;text-align:center;}
 th:first-child{text-align:left;}
 td{padding:8px 11px;border-top:1px solid #F3F4F6;text-align:center;vertical-align:middle;}
 td:first-child{text-align:left;}
 tr.even{background:#fff;}tr.odd{background:#FAFAFA;}tr.tight{background:#FFFBEB;}
-.dn{font-size:12px;font-weight:600;}
-.ac{display:inline-flex;align-items:center;gap:5px;}
-.ab{width:38px;height:5px;background:#E5E7EB;border-radius:3px;overflow:hidden;}
-.af{height:100%;border-radius:3px;}
-.an{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;color:#374151;}
-.pfp{font-family:'IBM Plex Mono',monospace;font-weight:800;font-size:12px;color:var(--fp);}
-.pjp{font-family:'IBM Plex Mono',monospace;font-weight:800;font-size:12px;color:var(--jp);}
-.badge{padding:3px 8px;border-radius:10px;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:800;white-space:nowrap;}
-.badge.fp{background:var(--fp-l);color:var(--fp);}.badge.jp{background:var(--jp-l);color:var(--jp);}
-.ecell{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;}
-.ehi{color:var(--gold);}.elo{color:var(--subtle);}
 .fnotes{margin-top:0;}
 .fnote-ext{padding:13px 16px;background:#F5F3FF;border-radius:10px;border:1px solid #DDD6FE;margin-bottom:12px;}
-.fnote-ext-lbl{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:800;color:#5B21B6;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}
+.fnote-ext-lbl{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:800;color:#5B21B6;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}
 .fnote-ext p{font-size:12px;color:#4C1D95;line-height:1.7;margin:0;}
 .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 @media(max-width:540px){.fgrid{grid-template-columns:1fr;}}
 .fn{padding:12px 14px;border-radius:10px;}
 .fn.blue{background:#EFF6FF;border:1px solid #BFDBFE;}
 .fn.yellow{background:#FFFBEB;border:1px solid #FDE68A;}
-.fn-lbl{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:800;margin-bottom:4px;}
+.fn-lbl{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:800;margin-bottom:4px;}
 .fn.blue .fn-lbl{color:#1E40AF;}.fn.yellow .fn-lbl{color:#92400E;}
 .fn p{font-size:11px;line-height:1.6;margin:0;}
 .fn.blue p{color:#1E40AF;}.fn.yellow p{color:#92400E;}
@@ -136,15 +125,17 @@ tr.even{background:#fff;}tr.odd{background:#FAFAFA;}tr.tight{background:#FFFBEB;
   <div style="text-align:right"><div class="h-tsl">Última actualización</div><div class="h-ts">08 Jun 2026 · 15:59 UTC</div></div>
 </header>
 <main>
-  <div class="alert aw"><span style="font-size:18px">⚠️</span><div><strong>Resultado dentro del margen de error.</strong> Margen proyectado <strong>+0.75pp</strong> vs margen de error <strong>±0.5pp</strong>. Ningún resultado es concluyente.</div></div>
+
+  <div class="alert aw"><span style="font-size:18px">⚠️</span><div><strong>Resultado dentro del margen de error.</strong> Margen proyectado <strong>+0.28pp</strong> vs margen de error <strong>±0.36pp</strong>. Ningún resultado es concluyente.</div></div>
+  
 
   <div class="top-grid">
     <div class="ring-card">
-      <svg width="122" height="122" id="ringsvg">
+      <svg width="122" height="122">
         <circle cx="61" cy="61" r="55" fill="none" stroke="#E5E7EB" stroke-width="11"/>
         <circle cx="61" cy="61" r="55" fill="none" stroke="#10B981" stroke-width="11"
           stroke-linecap="round" transform="rotate(-90 61 61)" id="ringArc"/>
-        <text x="61" y="56" text-anchor="middle" fill="#111" font-size="22" font-weight="800" font-family="'IBM Plex Mono',monospace">93.481%</text>
+        <text x="61" y="56" text-anchor="middle" fill="#111" font-size="22" font-weight="800" font-family="IBM Plex Mono,monospace">93.481%</text>
         <text x="61" y="72" text-anchor="middle" fill="#6B7280" font-size="11" font-family="sans-serif">AVANCE</text>
       </svg>
       <div class="ring-sub">86,719<br>de 92,766 actas</div>
@@ -159,32 +150,20 @@ tr.even{background:#fff;}tr.odd{background:#FAFAFA;}tr.tight{background:#FFFBEB;
         <div class="sbox fp">
           <div class="slbl fp">KEIKO FUJIMORI · FP</div>
           <div class="dual-pct">
-            <div class="dual-col ya">
-              <div class="dual-lbl ya">YA CONTADO</div>
-              <div class="dual-num ya">50.035%</div>
-            </div>
-            <div class="dual-col proj">
-              <div class="dual-lbl fp-proj">PROYECTADO</div>
-              <div class="dual-num fp" id="projFP">50.38%</div>
-            </div>
+            <div class="dual-col ya"><div class="dual-lbl ya">YA CONTADO</div><div class="dual-num ya">50.035%</div></div>
+            <div class="dual-col proj"><div class="dual-lbl fp-proj">PROYECTADO</div><div class="dual-num fp" id="projFP">50.14%</div></div>
           </div>
-          <div class="srange fp">Rango: [49.91%, 50.85%]</div>
-          <div class="svotes">8,769,222 contados · 9,407,045 proy.</div>
+          <div class="srange fp">Rango: [49.78%, 50.5%]</div>
+          <div class="svotes">8,769,222 contados · 9,321,391 proy.</div>
         </div>
         <div class="sbox jp">
           <div class="slbl jp">ROBERTO SÁNCHEZ · JP</div>
           <div class="dual-pct">
-            <div class="dual-col ya">
-              <div class="dual-lbl ya">YA CONTADO</div>
-              <div class="dual-num ya">49.965%</div>
-            </div>
-            <div class="dual-col proj">
-              <div class="dual-lbl jp-proj">PROYECTADO</div>
-              <div class="dual-num jp" id="projJP">49.62%</div>
-            </div>
+            <div class="dual-col ya"><div class="dual-lbl ya">YA CONTADO</div><div class="dual-num ya">49.965%</div></div>
+            <div class="dual-col proj"><div class="dual-lbl jp-proj">PROYECTADO</div><div class="dual-num jp" id="projJP">49.86%</div></div>
           </div>
-          <div class="srange jp">Rango: [49.15%, 50.09%]</div>
-          <div class="svotes">8,756,887 contados · 9,266,101 proy.</div>
+          <div class="srange jp">Rango: [49.5%, 50.22%]</div>
+          <div class="svotes">8,756,887 contados · 9,270,119 proy.</div>
         </div>
       </div>
       <div class="sbar" id="mainBar">
@@ -193,14 +172,14 @@ tr.even{background:#fff;}tr.odd{background:#FAFAFA;}tr.tight{background:#FFFBEB;
       </div>
       <div class="err-wrap" id="errWrap" style="display:none">
         <div class="err-track"></div>
-        <div class="err-band" style="left:49.91%;width:0.94%"></div>
-        <div class="err-needle" style="left:50.38%"></div>
+        <div class="err-band" style="left:49.78%;width:0.72%"></div>
+        <div class="err-needle" style="left:50.14%"></div>
         <div class="err-50" style="left:50%"></div>
-        <div class="err-lbls"><span>Pes FP: 49.91%</span><span>50%</span><span>Opt FP: 50.85%</span></div>
+        <div class="err-lbls"><span>Pes FP: 49.78%</span><span>50%</span><span>Opt FP: 50.5%</span></div>
       </div>
       <div class="mrow" id="mrowEl" style="display:none;margin-top:10px">
-        <span><strong>Margen proyectado:</strong> <span class="vfp">+0.75pp</span></span>
-        <span><strong>Margen de error:</strong> <span class="vgold">±0.5pp</span></span>
+        <span><strong>Margen proyectado:</strong> <span class="vfp">+0.28pp</span></span>
+        <span><strong>Margen de error:</strong> <span class="vgold">±0.36pp</span></span>
       </div>
     </div>
   </div>
@@ -212,104 +191,164 @@ tr.even{background:#fff;}tr.odd{background:#FAFAFA;}tr.tight{background:#FFFBEB;
     <div class="kpi" style="border-top-color:#8B5CF6"><div class="klbl">Extranjero</div><div class="kval">2,543</div><div class="ksub">actas · 0 contabilizadas</div></div>
   </div>
 
+  <!-- ANÁLISIS -->
   <div class="section-card">
     <div class="sec-title">🔍 Análisis del resultado</div>
-    <div class="sec-lbl">Situación actual al 93.24% de avance</div>
-    <p class="sec-p">Con <strong>86,719</strong> actas contabilizadas de <strong>92,766</strong>, Keiko Fujimori lidera con <strong style="color:var(--fp)">50.035%</strong> frente al <strong style="color:var(--jp)">49.965%</strong> de Roberto Sánchez — apenas <strong>12,335 votos</strong> de diferencia. El margen continúa comprimiéndose conforme ingresan actas del sur andino.</p>
-    <div class="sec-lbl">¿Qué falta por contar? ~1,201,189 votos en juego</div>
+    <div class="sec-lbl">Situación actual al 93.481% de avance</div>
+    <p class="sec-p">Con <strong>86,719</strong> actas contabilizadas de <strong>92,766</strong>, Keiko Fujimori lidera con <strong style="color:var(--fp)">50.035%</strong> frente al <strong style="color:var(--jp)">49.965%</strong> de Roberto Sánchez — apenas <strong>12,335 votos</strong> de diferencia.</p>
+    <div class="sec-lbl">Actas pendientes — 1,513 para envío JEE + 4,534 pendientes ONPE + 2,543 extranjero</div>
     <div class="pend-grid">
       <div class="pbox" style="border-left:3px solid #6B7280">
-        <div class="pbox-lbl" style="color:#6B7280">PERÚ — 1,513 para envío JEE + 4,534 pendientes ONPE = 6,047 sin contabilizar</div>
-        <p>Est. <strong>415,562</strong> votos. Mix pendiente en Perú: <strong style="color:var(--fp)">51.44% FP</strong> / <strong style="color:var(--jp)">48.56% JP</strong>. Loreto (53.5% FP) y Ayacucho (79% JP) concentran las mayores bolsas de actas.</p>
+        <div class="pbox-lbl" style="color:#6B7280">PERÚ — 1,513 para envío JEE + 4,534 pend. ONPE = 6,047 actas sin contabilizar</div>
+        <p>Ambas categorías pendientes. Mix proyectado Perú favorable a FP en Selva y Lima, pero JP domina fuertemente en el Sur andino.</p>
       </div>
       <div class="pbox" style="border-left:3px solid #8B5CF6">
-        <div class="pbox-lbl" style="color:#8B5CF6">EXTRANJERO — 2,543 actas pendientes*</div>
-        <p>Est. <strong>514,496</strong> votos. Ninguna acta del exterior contabilizada. Mix Lima/Lima: <strong style="color:var(--fp)">64.54% FP</strong> / <strong style="color:var(--jp)">35.46% JP</strong>. <strong>Factor decisivo</strong> de la proyección.</p>
+        <div class="pbox-lbl" style="color:#8B5CF6">EXTRANJERO — 2,543 actas (ninguna contabilizada)*</div>
+        <p>Estimación: <strong>432,310 votos</strong> (VPA=170 · mix FP <strong style="color:var(--fp)">56.919%</strong> / JP <strong style="color:var(--jp)">43.081%</strong>). Representa el <strong>40.1%</strong> del total pendiente.</p>
       </div>
     </div>
     <div class="psumm">
-      <div style="font-size:11px;color:var(--muted);margin-bottom:6px">Mix proyectado total (~1,158,718 votos pendientes)</div>
+      <div style="font-size:11px;color:var(--muted);margin-bottom:6px">Mix proyectado total (~1,077,082 votos pendientes)</div>
       <div class="sbar" style="height:22px">
-        <div class="bfp" style="width:55.4%"><span class="blbl">55.4%</span></div>
-        <div class="bjp" style="width:44.6%"><span class="blbl">44.6%</span></div>
+        <div class="bfp" style="width:51.7%"><span class="blbl">51.7%</span></div>
+        <div class="bjp" style="width:48.3%"><span class="blbl">48.3%</span></div>
       </div>
     </div>
     <div class="concl warn">
       <div class="concl-lbl">⚠️ Conclusión — resultado dentro del margen de error</div>
-      <p>Proyección 100%: <strong>Keiko 50.36%</strong> / <strong>Sánchez 49.64%</strong>, margen <strong>+0.75pp</strong>. Con error <strong>±0.5pp</strong>, en el pesimista FP cae a <strong>49.87%</strong> y JP ganaría. <strong>Solo el JNE proclama al presidente electo.</strong></p>
+      <p>Proyección al 100%: <strong>Keiko 50.14%</strong> / <strong>Sánchez 49.86%</strong>, margen <strong>+0.28pp</strong>. Margen de error <strong>±0.36pp</strong> — en el pesimista FP cae a <strong>49.78%</strong>y JP ganaría. <strong>Solo el JNE proclama al presidente electo.</strong></p>
     </div>
   </div>
 
-  
+  <!-- DISTRIBUCIÓN PENDIENTES -->
   <div class="section-card">
     <div class="sec-title">🗺️ Distribución de votos pendientes por región</div>
-    <div style="font-size:12px;color:var(--muted);margin-bottom:14px">~1,158,718 votos totales en juego · Mix proyectado: <strong style="color:var(--fp)">55.4% FP</strong> / <strong style="color:var(--jp)">44.6% JP</strong></div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:14px">~1,077,082 votos totales en juego · Mix proyectado: <strong style="color:var(--fp)">51.7% FP</strong> / <strong style="color:var(--jp)">48.3% JP</strong></div>
     <div class="sec-lbl">Distribución por origen</div>
-    <div style="display:flex;height:26px;border-radius:6px;overflow:hidden;box-shadow:inset 0 1px 3px rgba(0,0,0,.10);margin-bottom:8px">
-      <div style="width:42.8%;background:#7C3AED;display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:9px;font-weight:800;font-family:'IBM Plex Mono',monospace">Extranjero 42.8%</span></div>
-      <div style="width:19.6%;background:#0891B2;display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:9px;font-weight:800;font-family:'IBM Plex Mono',monospace">Selva 19.6%</span></div>
-      <div style="width:18.2%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:9px;font-weight:800;font-family:'IBM Plex Mono',monospace">Lima 18.2%</span></div>
-      <div style="width:11.2%;background:#0369A1;display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:9px;font-weight:800;font-family:'IBM Plex Mono',monospace">Sur 11%</span></div>
-      <div style="width:8.2%;background:#65A30D"></div>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:6px 12px;margin-bottom:14px">
-      <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#7C3AED"></div><span style="font-size:10px;color:var(--muted);font-family:IBM Plex Mono,monospace">Extranjero (42.8%)</span></div><div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#0891B2"></div><span style="font-size:10px;color:var(--muted);font-family:IBM Plex Mono,monospace">Selva (19.6%)</span></div><div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#C0392B"></div><span style="font-size:10px;color:var(--muted);font-family:IBM Plex Mono,monospace">Lima Metro (18.2%)</span></div><div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#0369A1"></div><span style="font-size:10px;color:var(--muted);font-family:IBM Plex Mono,monospace">Sur (11.2%)</span></div><div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#65A30D"></div><span style="font-size:10px;color:var(--muted);font-family:IBM Plex Mono,monospace">Sierra Centro (3.0%)</span></div><div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#EA580C"></div><span style="font-size:10px;color:var(--muted);font-family:IBM Plex Mono,monospace">Costa Norte (2.8%)</span></div><div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#84CC16"></div><span style="font-size:10px;color:var(--muted);font-family:IBM Plex Mono,monospace">Sierra Norte (1.9%)</span></div><div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#F59E0B"></div><span style="font-size:10px;color:var(--muted);font-family:IBM Plex Mono,monospace">Costa Sur (0.4%)</span></div>
-    </div>
+    <div style="display:flex;height:26px;border-radius:6px;overflow:hidden;box-shadow:inset 0 1px 3px rgba(0,0,0,.10);margin-bottom:8px"><div style="width:40.1%;background:#7C3AED;display:flex;align-items:center;justify-content:center" title="Extranjero: 40.1%"><span style=color:#fff;font-size:9px;font-weight:800;font-family:IBM Plex Mono,monospace;white-space:nowrap>Extranjero 40.1%</span></div><div style="width:20.2%;background:#C0392B;display:flex;align-items:center;justify-content:center" title="Lima Metropolitana: 20.2%"><span style=color:#fff;font-size:9px;font-weight:800;font-family:IBM Plex Mono,monospace;white-space:nowrap>Lima 20.2%</span></div><div style="width:19.1%;background:#0891B2;display:flex;align-items:center;justify-content:center" title="Selva: 19.1%"><span style=color:#fff;font-size:9px;font-weight:800;font-family:IBM Plex Mono,monospace;white-space:nowrap>Selva 19.1%</span></div><div style="width:12.2%;background:#0369A1;display:flex;align-items:center;justify-content:center" title="Sur: 12.2%"><span style=color:#fff;font-size:9px;font-weight:800;font-family:IBM Plex Mono,monospace;white-space:nowrap>Sur 12.2%</span></div><div style="width:2.9%;background:#65A30D;display:flex;align-items:center;justify-content:center" title="Sierra Centro: 2.9%"></div><div style="width:3.1%;background:#EA580C;display:flex;align-items:center;justify-content:center" title="Costa Norte: 3.1%"></div><div style="width:1.9%;background:#84CC16;display:flex;align-items:center;justify-content:center" title="Sierra Norte: 1.9%"></div><div style="width:0.5%;background:#F59E0B;display:flex;align-items:center;justify-content:center" title="Costa Sur: 0.5%"></div></div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px 12px;margin-bottom:14px"><div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#7C3AED"></div><span style="font-size:10px;color:#6B7280;font-family:IBM Plex Mono,monospace">Extranjero (40.1%)</span></div><div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#C0392B"></div><span style="font-size:10px;color:#6B7280;font-family:IBM Plex Mono,monospace">Lima Metropolitana (20.2%)</span></div><div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#0891B2"></div><span style="font-size:10px;color:#6B7280;font-family:IBM Plex Mono,monospace">Selva (19.1%)</span></div><div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#0369A1"></div><span style="font-size:10px;color:#6B7280;font-family:IBM Plex Mono,monospace">Sur (12.2%)</span></div><div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#65A30D"></div><span style="font-size:10px;color:#6B7280;font-family:IBM Plex Mono,monospace">Sierra Centro (2.9%)</span></div><div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#EA580C"></div><span style="font-size:10px;color:#6B7280;font-family:IBM Plex Mono,monospace">Costa Norte (3.1%)</span></div><div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#84CC16"></div><span style="font-size:10px;color:#6B7280;font-family:IBM Plex Mono,monospace">Sierra Norte (1.9%)</span></div><div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#F59E0B"></div><span style="font-size:10px;color:#6B7280;font-family:IBM Plex Mono,monospace">Costa Sur (0.5%)</span></div></div>
     <div style="overflow-x:auto">
       <table style="width:100%;border-collapse:collapse">
         <thead><tr style="background:#F9FAFB">
-          <th style="padding:7px 10px;text-align:left;font-family:IBM Plex Mono,monospace;font-size:9px;color:var(--subtle);font-weight:700;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap">Región</th>
-          <th style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:9px;color:var(--subtle);font-weight:700;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap">Avance</th>
-          <th style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:9px;color:var(--subtle);font-weight:700;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap">Actas pend.</th>
-          <th style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:9px;color:var(--subtle);font-weight:700;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap">Votos pend. est.</th>
-          <th style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:9px;color:var(--subtle);font-weight:700;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap">% del total</th>
-          <th style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:9px;color:var(--subtle);font-weight:700;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap">Mix proyectado</th>
-          <th style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:9px;color:var(--subtle);font-weight:700;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap">Va a FP</th>
-          <th style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:9px;color:var(--subtle);font-weight:700;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap">Va a JP</th>
+          <th style="text-align:left;padding:7px 10px;font-family:IBM Plex Mono,monospace;font-size:9px;color:var(--subtle);font-weight:700;text-transform:uppercase;white-space:nowrap">Región</th>
+          <th style="padding:7px 10px;font-family:IBM Plex Mono,monospace;font-size:9px;color:var(--subtle);font-weight:700;text-transform:uppercase;white-space:nowrap">Avance</th>
+          <th style="padding:7px 10px;font-family:IBM Plex Mono,monospace;font-size:9px;color:var(--subtle);font-weight:700;text-transform:uppercase;white-space:nowrap">Actas pend.</th>
+          <th style="padding:7px 10px;font-family:IBM Plex Mono,monospace;font-size:9px;color:var(--subtle);font-weight:700;text-transform:uppercase;white-space:nowrap">Votos pend. est.</th>
+          <th style="padding:7px 10px;font-family:IBM Plex Mono,monospace;font-size:9px;color:var(--subtle);font-weight:700;text-transform:uppercase;white-space:nowrap">% del total</th>
+          <th style="padding:7px 10px;font-family:IBM Plex Mono,monospace;font-size:9px;color:var(--subtle);font-weight:700;text-transform:uppercase;white-space:nowrap">Mix proyectado</th>
+          <th style="padding:7px 10px;font-family:IBM Plex Mono,monospace;font-size:9px;color:var(--subtle);font-weight:700;text-transform:uppercase;white-space:nowrap">Va a FP</th>
+          <th style="padding:7px 10px;font-family:IBM Plex Mono,monospace;font-size:9px;color:var(--subtle);font-weight:700;text-transform:uppercase;white-space:nowrap">Va a JP</th>
         </tr></thead>
         <tbody>
-<tr style="border-top:1px solid #F3F4F6;"><td style="padding:7px 10px"><div style="display:flex;align-items:center;gap:6px"><div style="width:8px;height:24px;border-radius:2px;background:#C0392B;flex-shrink:0"></div><span style="font-size:12px;font-weight:600;color:#111">Lima Metropolitana</span></div></td><td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:36px;height:4px;background:#E5E7EB;border-radius:2px;overflow:hidden"><div style="width:96.8%;height:100%;background:#10B981"></div></div><span style="font-size:11px;font-weight:700;color:#374151;font-family:IBM Plex Mono,monospace">96.8%</span></div></td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#C0392B">993</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;color:#374151">218,097</td><td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:40px;height:6px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:18.8%;height:100%;background:#C0392B"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#C0392B">18.8%</span></div></td><td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:64.0%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>64.0%</span></div><div style="width:36.0%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>36.0%</span></div></div></td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">139,605</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">78,491</td></tr>
-<tr style="border-top:1px solid #F3F4F6;"><td style="padding:7px 10px"><div style="display:flex;align-items:center;gap:6px"><div style="width:8px;height:24px;border-radius:2px;background:#0891B2;flex-shrink:0"></div><span style="font-size:12px;font-weight:600;color:#111">Selva</span></div></td><td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:36px;height:4px;background:#E5E7EB;border-radius:2px;overflow:hidden"><div style="width:76.4%;height:100%;background:#F59E0B"></div></div><span style="font-size:11px;font-weight:700;color:#374151;font-family:IBM Plex Mono,monospace">76.4%</span></div></td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#0891B2">1,205</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;color:#374151">206,176</td><td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:40px;height:6px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:17.8%;height:100%;background:#0891B2"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#0891B2">17.8%</span></div></td><td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:51.1%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>51.1%</span></div><div style="width:48.9%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>48.9%</span></div></div></td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">105,455</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">100,720</td></tr>
-<tr style="border-top:1px solid #F3F4F6;"><td style="padding:7px 10px"><div style="display:flex;align-items:center;gap:6px"><div style="width:8px;height:24px;border-radius:2px;background:#0369A1;flex-shrink:0"></div><span style="font-size:12px;font-weight:600;color:#111">Sur</span></div></td><td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:36px;height:4px;background:#E5E7EB;border-radius:2px;overflow:hidden"><div style="width:90.3%;height:100%;background:#10B981"></div></div><span style="font-size:11px;font-weight:700;color:#374151;font-family:IBM Plex Mono,monospace">90.3%</span></div></td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#0369A1">766</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;color:#374151">131,117</td><td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:40px;height:6px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:11.3%;height:100%;background:#0369A1"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#0369A1">11.3%</span></div></td><td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:20.9%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>20.9%</span></div><div style="width:79.1%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>79.1%</span></div></div></td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">27,389</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">103,727</td></tr>
-<tr style="border-top:1px solid #F3F4F6;"><td style="padding:7px 10px"><div style="display:flex;align-items:center;gap:6px"><div style="width:8px;height:24px;border-radius:2px;background:#EA580C;flex-shrink:0"></div><span style="font-size:12px;font-weight:600;color:#111">Costa Norte</span></div></td><td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:36px;height:4px;background:#E5E7EB;border-radius:2px;overflow:hidden"><div style="width:98.4%;height:100%;background:#10B981"></div></div><span style="font-size:11px;font-weight:700;color:#374151;font-family:IBM Plex Mono,monospace">98.4%</span></div></td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#EA580C">170</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;color:#374151">33,223</td><td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:40px;height:6px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:2.9%;height:100%;background:#EA580C"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#EA580C">2.9%</span></div></td><td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:56.3%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>56.3%</span></div><div style="width:43.7%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>43.7%</span></div></div></td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">18,692</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">14,531</td></tr>
-<tr style="border-top:1px solid #F3F4F6;"><td style="padding:7px 10px"><div style="display:flex;align-items:center;gap:6px"><div style="width:8px;height:24px;border-radius:2px;background:#65A30D;flex-shrink:0"></div><span style="font-size:12px;font-weight:600;color:#111">Sierra Centro</span></div></td><td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:36px;height:4px;background:#E5E7EB;border-radius:2px;overflow:hidden"><div style="width:94.8%;height:100%;background:#10B981"></div></div><span style="font-size:11px;font-weight:700;color:#374151;font-family:IBM Plex Mono,monospace">94.8%</span></div></td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#65A30D">189</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;color:#374151">31,240</td><td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:40px;height:6px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:2.7%;height:100%;background:#65A30D"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#65A30D">2.7%</span></div></td><td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:39.3%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>39.3%</span></div><div style="width:60.7%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>60.7%</span></div></div></td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">12,273</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">18,966</td></tr>
-<tr style="border-top:1px solid #F3F4F6;"><td style="padding:7px 10px"><div style="display:flex;align-items:center;gap:6px"><div style="width:8px;height:24px;border-radius:2px;background:#84CC16;flex-shrink:0"></div><span style="font-size:12px;font-weight:600;color:#111">Sierra Norte</span></div></td><td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:36px;height:4px;background:#E5E7EB;border-radius:2px;overflow:hidden"><div style="width:92.8%;height:100%;background:#10B981"></div></div><span style="font-size:11px;font-weight:700;color:#374151;font-family:IBM Plex Mono,monospace">92.8%</span></div></td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#84CC16">159</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;color:#374151">19,995</td><td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:40px;height:6px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:1.7%;height:100%;background:#84CC16"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#84CC16">1.7%</span></div></td><td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:23.3%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>23.3%</span></div><div style="width:76.7%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>76.7%</span></div></div></td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">4,653</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">15,341</td></tr>
-<tr style="border-top:1px solid #F3F4F6;"><td style="padding:7px 10px"><div style="display:flex;align-items:center;gap:6px"><div style="width:8px;height:24px;border-radius:2px;background:#F59E0B;flex-shrink:0"></div><span style="font-size:12px;font-weight:600;color:#111">Costa Sur</span></div></td><td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:36px;height:4px;background:#E5E7EB;border-radius:2px;overflow:hidden"><div style="width:98.4%;height:100%;background:#10B981"></div></div><span style="font-size:11px;font-weight:700;color:#374151;font-family:IBM Plex Mono,monospace">98.4%</span></div></td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#F59E0B">22</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;color:#374151">4,921</td><td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:40px;height:6px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:0.4%;height:100%;background:#F59E0B"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#F59E0B">0.4%</span></div></td><td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:54.7%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>54.7%</span></div><div style="width:45.3%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>45.3%</span></div></div></td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">2,694</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">2,227</td></tr>
-<tr style="border-top:1px solid #F3F4F6;background:#F5F3FF;"><td style="padding:7px 10px"><div style="display:flex;align-items:center;gap:6px"><div style="width:8px;height:24px;border-radius:2px;background:#7C3AED;flex-shrink:0"></div><span style="font-size:12px;font-weight:600;color:#5B21B6">Extranjero*</span></div></td><td style="padding:7px 10px;text-align:center">0%</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#7C3AED">2,543</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;color:#374151">513,946</td><td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:40px;height:6px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:44.4%;height:100%;background:#7C3AED"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#7C3AED">44.4%</span></div></td><td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:64.5%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>64.5%</span></div><div style="width:35.5%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>35.5%</span></div></div></td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">331,721</td><td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">182,224</td></tr>
+<tr style="border-top:1px solid #F3F4F6;">
+<td style="padding:7px 10px"><div style="display:flex;align-items:center;gap:6px"><div style="width:8px;height:24px;border-radius:2px;background:#C0392B;flex-shrink:0"></div><span style="font-size:12px;font-weight:600;color:#111">Lima Metropolitana</span></div></td>
+<td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:36px;height:4px;background:#E5E7EB;border-radius:2px;overflow:hidden"><div style="width:96.8%;height:100%;background:#10B981"></div></div><span style="font-size:11px;font-weight:700;color:#374151;font-family:IBM Plex Mono,monospace">96.8%</span></div></td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#C0392B">993</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;color:#374151">218,097</td>
+<td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:40px;height:6px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:20.2%;height:100%;background:#C0392B"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#C0392B">20.2%</span></div></td>
+<td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:64.0%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>64.0%</span></div><div style="width:36.0%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>36.0%</span></div></div></td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">139,605</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">78,491</td>
+</tr><tr style="border-top:1px solid #F3F4F6;">
+<td style="padding:7px 10px"><div style="display:flex;align-items:center;gap:6px"><div style="width:8px;height:24px;border-radius:2px;background:#0891B2;flex-shrink:0"></div><span style="font-size:12px;font-weight:600;color:#111">Selva</span></div></td>
+<td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:36px;height:4px;background:#E5E7EB;border-radius:2px;overflow:hidden"><div style="width:76.4%;height:100%;background:#F59E0B"></div></div><span style="font-size:11px;font-weight:700;color:#374151;font-family:IBM Plex Mono,monospace">76.4%</span></div></td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#0891B2">1,205</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;color:#374151">206,176</td>
+<td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:40px;height:6px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:19.1%;height:100%;background:#0891B2"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#0891B2">19.1%</span></div></td>
+<td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:51.1%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>51.1%</span></div><div style="width:48.9%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>48.9%</span></div></div></td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">105,455</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">100,720</td>
+</tr><tr style="border-top:1px solid #F3F4F6;">
+<td style="padding:7px 10px"><div style="display:flex;align-items:center;gap:6px"><div style="width:8px;height:24px;border-radius:2px;background:#0369A1;flex-shrink:0"></div><span style="font-size:12px;font-weight:600;color:#111">Sur</span></div></td>
+<td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:36px;height:4px;background:#E5E7EB;border-radius:2px;overflow:hidden"><div style="width:90.3%;height:100%;background:#10B981"></div></div><span style="font-size:11px;font-weight:700;color:#374151;font-family:IBM Plex Mono,monospace">90.3%</span></div></td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#0369A1">766</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;color:#374151">131,117</td>
+<td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:40px;height:6px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:12.2%;height:100%;background:#0369A1"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#0369A1">12.2%</span></div></td>
+<td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:20.9%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>20.9%</span></div><div style="width:79.1%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>79.1%</span></div></div></td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">27,389</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">103,727</td>
+</tr><tr style="border-top:1px solid #F3F4F6;">
+<td style="padding:7px 10px"><div style="display:flex;align-items:center;gap:6px"><div style="width:8px;height:24px;border-radius:2px;background:#EA580C;flex-shrink:0"></div><span style="font-size:12px;font-weight:600;color:#111">Costa Norte</span></div></td>
+<td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:36px;height:4px;background:#E5E7EB;border-radius:2px;overflow:hidden"><div style="width:98.4%;height:100%;background:#10B981"></div></div><span style="font-size:11px;font-weight:700;color:#374151;font-family:IBM Plex Mono,monospace">98.4%</span></div></td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#EA580C">170</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;color:#374151">33,223</td>
+<td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:40px;height:6px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:3.1%;height:100%;background:#EA580C"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#EA580C">3.1%</span></div></td>
+<td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:56.3%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>56.3%</span></div><div style="width:43.7%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>43.7%</span></div></div></td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">18,692</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">14,531</td>
+</tr><tr style="border-top:1px solid #F3F4F6;">
+<td style="padding:7px 10px"><div style="display:flex;align-items:center;gap:6px"><div style="width:8px;height:24px;border-radius:2px;background:#65A30D;flex-shrink:0"></div><span style="font-size:12px;font-weight:600;color:#111">Sierra Centro</span></div></td>
+<td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:36px;height:4px;background:#E5E7EB;border-radius:2px;overflow:hidden"><div style="width:94.8%;height:100%;background:#10B981"></div></div><span style="font-size:11px;font-weight:700;color:#374151;font-family:IBM Plex Mono,monospace">94.8%</span></div></td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#65A30D">189</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;color:#374151">31,240</td>
+<td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:40px;height:6px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:2.9%;height:100%;background:#65A30D"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#65A30D">2.9%</span></div></td>
+<td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:39.3%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>39.3%</span></div><div style="width:60.7%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>60.7%</span></div></div></td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">12,273</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">18,966</td>
+</tr><tr style="border-top:1px solid #F3F4F6;">
+<td style="padding:7px 10px"><div style="display:flex;align-items:center;gap:6px"><div style="width:8px;height:24px;border-radius:2px;background:#84CC16;flex-shrink:0"></div><span style="font-size:12px;font-weight:600;color:#111">Sierra Norte</span></div></td>
+<td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:36px;height:4px;background:#E5E7EB;border-radius:2px;overflow:hidden"><div style="width:92.8%;height:100%;background:#10B981"></div></div><span style="font-size:11px;font-weight:700;color:#374151;font-family:IBM Plex Mono,monospace">92.8%</span></div></td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#84CC16">159</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;color:#374151">19,995</td>
+<td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:40px;height:6px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:1.9%;height:100%;background:#84CC16"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#84CC16">1.9%</span></div></td>
+<td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:23.3%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>23.3%</span></div><div style="width:76.7%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>76.7%</span></div></div></td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">4,653</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">15,341</td>
+</tr><tr style="border-top:1px solid #F3F4F6;">
+<td style="padding:7px 10px"><div style="display:flex;align-items:center;gap:6px"><div style="width:8px;height:24px;border-radius:2px;background:#F59E0B;flex-shrink:0"></div><span style="font-size:12px;font-weight:600;color:#111">Costa Sur</span></div></td>
+<td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:36px;height:4px;background:#E5E7EB;border-radius:2px;overflow:hidden"><div style="width:98.4%;height:100%;background:#10B981"></div></div><span style="font-size:11px;font-weight:700;color:#374151;font-family:IBM Plex Mono,monospace">98.4%</span></div></td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#F59E0B">22</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;color:#374151">4,921</td>
+<td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:40px;height:6px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:0.5%;height:100%;background:#F59E0B"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#F59E0B">0.5%</span></div></td>
+<td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:54.7%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>54.7%</span></div><div style="width:45.3%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>45.3%</span></div></div></td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">2,694</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">2,227</td>
+</tr><tr style="border-top:1px solid #F3F4F6;background:#F5F3FF;">
+<td style="padding:7px 10px"><div style="display:flex;align-items:center;gap:6px"><div style="width:8px;height:24px;border-radius:2px;background:#7C3AED;flex-shrink:0"></div><span style="font-size:12px;font-weight:600;color:#5B21B6">Extranjero*</span></div></td>
+<td style="padding:7px 10px;text-align:center">0%</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#7C3AED">2,543</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;color:#374151">432,310</td>
+<td style="padding:7px 10px;text-align:center"><div style="display:inline-flex;align-items:center;gap:4px"><div style="width:40px;height:6px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:40.1%;height:100%;background:#7C3AED"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#7C3AED">40.1%</span></div></td>
+<td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:56.919%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>56.919%</span></div><div style="width:43.081%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style=color:#fff;font-size:9px;font-weight:800>43.081%</span></div></div></td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">246,066</td>
+<td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">186,243</td>
+</tr>
           <tr style="border-top:2px solid #E5E7EB;background:#F9FAFB">
             <td style="padding:7px 10px;font-size:12px;font-weight:800">TOTAL</td><td></td>
             <td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800">8,590</td>
-            <td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800">1,158,718</td>
+            <td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800">1,077,082</td>
             <td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800">100%</td>
-            <td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:55.4%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:9px;font-weight:800">54.8%</span></div><div style="width:44.6%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:9px;font-weight:800">45.2%</span></div></div></td>
-            <td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">642,482</td>
-            <td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">516,227</td>
+            <td style="padding:7px 10px;min-width:120px"><div style="display:flex;height:16px;border-radius:4px;overflow:hidden"><div style="width:51.7%;background:#C0392B;display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:9px;font-weight:800">51.7%</span></div><div style="width:48.3%;background:#1A56A0;display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:9px;font-weight:800">48.3%</span></div></div></td>
+            <td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#C0392B">556,827</td>
+            <td style="padding:7px 10px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:800;color:#1A56A0">520,246</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div style="margin-top:10px;font-size:11px;color:var(--muted);line-height:1.6">* El extranjero (42.8% del total pendiente) se proyecta con mix Lima/Lima (FP 64.5%). Es el bloque que más votos aporta a FP, compensando la ventaja de JP en el Sur y la Sierra.</div>
+    <div style="margin-top:10px;font-size:11px;color:var(--muted);line-height:1.6">* El extranjero (2,543 actas, 40.1% del total pendiente) se proyecta con VPA=170 votos/acta y mix FP 56.919% / JP 43.081%.</div>
   </div>
 
+  <!-- METODOLOGÍA -->
   <div class="section-card">
     <div class="sec-title">📐 Metodología</div>
     <div class="steps">
-      <div class="step"><div class="step-n"><span>01</span></div><div><div class="step-t">Fuente de datos</div><div class="step-d">Scraping del portal ONPE a nivel distrital. Dos tablas: votos por candidato y estado de actas. Se conserva el snapshot más reciente por ubigeo.</div></div></div>
-      <div class="step"><div class="step-n"><span>02</span></div><div><div class="step-t">Avance del conteo</div><div class="step-d">Avance = actas_contabilizadas / total_actas. Tanto las actas_enviadas_jee (1,513) como las actas_pendientes_jee (4,534) están pendientes de contabilización — sus votos no están incluidos en los resultados. Validado: total_actas = contabilizadas + enviadas_jee + pendientes en 2,102 distritos.</div></div></div>
-      <div class="step"><div class="step-n"><span>03</span></div><div><div class="step-t">Mix de preferencia</div><div class="step-d">Con actas &gt; 0: mix = votos_FP / (votos_FP + votos_JP). Sin actas: mix agregado de la provincia. Sin datos provinciales: mix nacional como fallback.</div></div></div>
+      <div class="step"><div class="step-n"><span>01</span></div><div><div class="step-t">Fuente de datos</div><div class="step-d">Scraping del portal ONPE a nivel distrital. Se conserva el snapshot más reciente por ubigeo cuando hay múltiples en el archivo.</div></div></div>
+      <div class="step"><div class="step-n"><span>02</span></div><div><div class="step-t">Avance del conteo</div><div class="step-d">Avance = actas_contabilizadas / total_actas. Tanto las actas_enviadas_jee (1,513) como las actas_pendientes_jee (4,534) están pendientes de contabilización. Validado: total = contabilizadas + enviadas_jee + pendientes en 2,102 distritos.</div></div></div>
+      <div class="step"><div class="step-n"><span>03</span></div><div><div class="step-t">Mix de preferencia</div><div class="step-d">Con actas &gt; 0: mix = votos_FP / (votos_FP + votos_JP). Sin actas: mix agregado de la provincia. Sin datos provinciales: mix nacional.</div></div></div>
       <div class="step"><div class="step-n"><span>04</span></div><div><div class="step-t">Proyección al 100%</div><div class="step-d">Con avance parcial: votos_proyectados = votos_contados / (actas_pct / 100). Sin actas: votos_proyectados = total_actas × VPA_provincial. Los votos faltantes se distribuyen con el mix del distrito.</div></div></div>
-      <div class="step"><div class="step-n"><span>05</span></div><div><div class="step-t">Voto extranjero</div><div class="step-d">2,543 actas pendientes. Proyectadas con VPA nacional (202.3 votos/acta) y mix Lima/Provincia Lima (FP 64.54% / JP 35.46%). Ver supuesto * al pie.</div></div></div>
-      <div class="step"><div class="step-n"><span>06</span></div><div><div class="step-t">Margen de error</div><div class="step-d">±1 desviación estándar del mix distrital por provincia. Escenarios optimista (mix + 1σ) y pesimista (mix − 1σ). FP: [49.87%, 50.87%], ±0.5pp.</div></div></div>
+      <div class="step"><div class="step-n"><span>05</span></div><div><div class="step-t">Voto extranjero</div><div class="step-d">2,543 actas, ninguna contabilizada. Proyectadas con VPA=170 votos/acta (supuesto externo) y mix FP 56.919% / JP 43.081% (supuesto externo). VPA Perú para referencia: 202.1 votos/acta. Ver supuesto * al pie.</div></div></div>
+      <div class="step"><div class="step-n"><span>06</span></div><div><div class="step-t">Margen de error</div><div class="step-d">±1 desviación estándar del mix distrital por provincia. Escenarios optimista (mix + 1σ) y pesimista (mix − 1σ). FP: [49.78%, 50.5%], ±0.36pp.</div></div></div>
     </div>
     <div class="ext-note">
       <div class="ext-lbl">* Supuesto voto extranjero</div>
-      <p>Se asume perfil similar a Lima/Provincia Lima por correlación histórica con la diáspora peruana (EE.UU., España, Argentina, Italia, Japón). Es la mayor fuente de incertidumbre del modelo. <strong>Se recomienda cautela hasta conocer los resultados reales del exterior.</strong></p>
+      <p>VPA=170 votos/acta y mix FP 56.919% / JP 43.081% son supuestos provistos externamente. El VPA nacional de Perú es 202.1 y el de Lima/Prov. Lima es 220.56. Este supuesto es la mayor fuente de incertidumbre del modelo. <strong>Se recomienda cautela hasta conocer los resultados reales del exterior.</strong></p>
     </div>
   </div>
 
+  <!-- TABLA DEPARTAMENTOS -->
   <div class="tcard">
     <div class="thead-row">
-      <div class="ttitle">Resultados por Departamento</div>
+      <div class="ttitle">Resultados por Departamento — Proyección 100%</div>
       <div style="display:flex;gap:6px;flex-wrap:wrap">
         <button class="sbtn on" onclick="sortT('dep',this)">Nombre</button>
         <button class="sbtn" onclick="sortT('avance',this)">Avance</button>
@@ -318,101 +357,80 @@ tr.even{background:#fff;}tr.odd{background:#FAFAFA;}tr.tight{background:#FFFBEB;
         <button class="sbtn" onclick="sortT('err',this)">Error</button>
       </div>
     </div>
-    <div class="view-row2">
-      <span class="sort-lbl">Ver:</span>
-      <button class="vbtn on" onclick="setTV('ya',this)">Mix ya contabilizado</button>
-      <button class="vbtn" onclick="setTV('inferido',this)">Proyección 100%</button>
+    <div class="twrap">
+      <table>
+        <thead><tr>
+          <th style="text-align:left">Departamento</th><th>Avance</th>
+          <th style="color:#C0392B">FP% ya</th><th style="color:#1A56A0">JP% ya</th>
+          <th style="color:#C0392B">FP% proy.</th><th style="color:#1A56A0">JP% proy.</th>
+          <th>Ganador</th><th>Barra</th><th>±Error</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
     </div>
-    <div class="twrap"><table><thead><tr>
-      <th style="text-align:left">Departamento</th><th>Avance</th><th>Keiko FP</th><th>Roberto JP</th><th>Ganador</th><th>Barra</th><th>±Error</th>
-    </tr></thead><tbody id="tbody"></tbody></table></div>
   </div>
 
+  <!-- NOTAS PIE -->
   <div class="fnotes">
     <div class="fnote-ext">
       <div class="fnote-ext-lbl">* Supuesto voto extranjero</div>
-      <p>Al no existir conteo del exterior, se proyecta con mix Lima/Provincia Lima (FP 64.54%). Países de destino: EE.UU., España, Argentina, Italia, Japón. Mayor fuente de incertidumbre del modelo. <strong>Cautela hasta conocer resultados reales del exterior.</strong></p>
+      <p>VPA=170 votos/acta · mix FP 56.919% / JP 43.081% (supuestos provistos externamente). VPA Perú = 202.1 · VPA Lima/Lima = 220.56. La elección del VPA y el mix del exterior son la mayor fuente de incertidumbre. <strong>Cautela hasta conocer resultados reales del exterior.</strong></p>
     </div>
     <div class="fgrid">
-      <div class="fn blue"><div class="fn-lbl">✓ FUENTE Y VALIDACIÓN</div><p>Datos: scraping ONPE 08/06/2026 15:59 UTC. Snapshot más reciente por ubigeo. Cuadratura de actas verificada. VPA: 202.3 votos/acta.</p></div>
-      <div class="fn yellow"><div class="fn-lbl">⚠️ ADVERTENCIA</div><p>Margen proyectado (+0.75pp) vs error (±0.47pp). Con 6,047 actas Perú + 2,543 extranjero pendientes, el resultado puede invertirse. Solo el JNE proclama al presidente electo.</p></div>
+      <div class="fn blue"><div class="fn-lbl">✓ FUENTE Y VALIDACIÓN</div><p>Scraping ONPE 08 Jun 2026 · 15:59 UTC. Snapshot más reciente por ubigeo. Cuadratura de actas verificada: 86,719+1,513+4,534=92,766 ✓. VPA Perú: 202.1 votos/acta.</p></div>
+      <div class="fn yellow"><div class="fn-lbl">⚠️ ADVERTENCIA</div><p>Margen proyectado (+0.28pp) vs error (±0.36pp). Con 6,047 actas Perú + 2,543 extranjero pendientes, el resultado puede invertirse. Solo el JNE proclama al presidente electo.</p></div>
     </div>
   </div>
-</main>
 
+</main>
 <script>
-const DEPS=[
-  {dep:"AMAZONAS",avance:88.3,fp_ya:37.64,jp_ya:62.36,fp_100:36.0,jp_100:64.0,fp_opt:36.62,fp_pes:35.43,me:0.59},
-  {dep:"APURÍMAC",avance:99.0,fp_ya:18.84,jp_ya:81.16,fp_100:18.81,jp_100:81.19,fp_opt:18.86,fp_pes:18.77,me:0.04},
-  {dep:"AREQUIPA",avance:99.2,fp_ya:36.43,jp_ya:63.57,fp_100:36.4,jp_100:63.6,fp_opt:36.48,fp_pes:36.32,me:0.08},
-  {dep:"AYACUCHO",avance:87.5,fp_ya:20.97,jp_ya:79.03,fp_100:20.89,jp_100:79.11,fp_opt:21.52,fp_pes:20.26,me:0.63},
-  {dep:"CAJAMARCA",avance:99.3,fp_ya:33.24,jp_ya:66.76,fp_100:33.25,jp_100:66.75,fp_opt:33.32,fp_pes:33.18,me:0.07},
-  {dep:"CALLAO",avance:97.6,fp_ya:65.61,jp_ya:34.39,fp_100:65.59,jp_100:34.41,fp_opt:65.82,fp_pes:65.37,me:0.22},
-  {dep:"CUSCO",avance:91.2,fp_ya:22.18,jp_ya:77.82,fp_100:22.07,jp_100:77.93,fp_opt:22.52,fp_pes:21.62,me:0.45},
-  {dep:"HUANCAVELICA",avance:92.9,fp_ya:18.57,jp_ya:81.43,fp_100:18.58,jp_100:81.42,fp_opt:18.97,fp_pes:18.18,me:0.39},
-  {dep:"HUÁNUCO",avance:95.9,fp_ya:35.94,jp_ya:64.06,fp_100:35.84,jp_100:64.16,fp_opt:36.12,fp_pes:35.57,me:0.27},
-  {dep:"ICA",avance:99.1,fp_ya:51.91,jp_ya:48.09,fp_100:51.94,jp_100:48.06,fp_opt:52.03,fp_pes:51.84,me:0.09},
-  {dep:"JUNÍN",avance:97.5,fp_ya:45.08,jp_ya:54.92,fp_100:45.05,jp_100:54.95,fp_opt:45.17,fp_pes:44.93,me:0.12},
-  {dep:"LA LIBERTAD",avance:99.3,fp_ya:57.53,jp_ya:42.47,fp_100:57.57,jp_100:42.43,fp_opt:57.6,fp_pes:57.53,me:0.04},
-  {dep:"LAMBAYEQUE",avance:99.6,fp_ya:58.85,jp_ya:41.15,fp_100:58.85,jp_100:41.15,fp_opt:58.88,fp_pes:58.82,me:0.03},
-  {dep:"LIMA",avance:96.8,fp_ya:63.5,jp_ya:36.5,fp_100:63.51,jp_100:36.49,fp_opt:63.77,fp_pes:63.25,me:0.26},
-  {dep:"LORETO",avance:62.3,fp_ya:55.53,jp_ya:44.47,fp_100:53.47,jp_100:46.53,fp_opt:56.32,fp_pes:50.98,me:2.67},
-  {dep:"MADRE DE DIOS",avance:85.8,fp_ya:32.2,jp_ya:67.8,fp_100:34.71,jp_100:65.29,fp_opt:35.49,fp_pes:33.94,me:0.78},
-  {dep:"MOQUEGUA",avance:99.7,fp_ya:27.43,jp_ya:72.57,fp_100:27.44,jp_100:72.56,fp_opt:27.49,fp_pes:27.39,me:0.05},
-  {dep:"PASCO",avance:95.5,fp_ya:38.83,jp_ya:61.17,fp_100:39.12,jp_100:60.88,fp_opt:39.66,fp_pes:38.58,me:0.54},
-  {dep:"PIURA",avance:98.7,fp_ya:56.95,jp_ya:43.05,fp_100:57.0,jp_100:43.0,fp_opt:57.13,fp_pes:56.87,me:0.13},
-  {dep:"PUNO",avance:98.6,fp_ya:13.52,jp_ya:86.48,fp_100:13.56,jp_100:86.44,fp_opt:13.62,fp_pes:13.51,me:0.05},
-  {dep:"SAN MARTÍN",avance:97.5,fp_ya:45.58,jp_ya:54.42,fp_100:45.44,jp_100:54.56,fp_opt:45.62,fp_pes:45.26,me:0.18},
-  {dep:"TACNA",avance:98.7,fp_ya:28.65,jp_ya:71.35,fp_100:28.68,jp_100:71.32,fp_opt:28.78,fp_pes:28.58,me:0.1},
-  {dep:"TUMBES",avance:99.4,fp_ya:64.34,jp_ya:35.66,fp_100:64.37,jp_100:35.63,fp_opt:64.44,fp_pes:64.29,me:0.07},
-  {dep:"UCAYALI",avance:87.3,fp_ya:53.37,jp_ya:46.63,fp_100:52.55,jp_100:47.45,fp_opt:54.05,fp_pes:51.29,me:1.38},
-  {dep:"ÁNCASH",avance:98.6,fp_ya:43.4,jp_ya:56.6,fp_100:43.38,jp_100:56.62,fp_opt:43.48,fp_pes:43.28,me:0.1},
-];
-let cv='ya',cs='dep',se=false;
+const DEPS=[{"departamento": "AMAZONAS", "avance": 89.9, "pct_fp_ya": 37.36, "pct_jp_ya": 62.64, "pct_fp_100": 36.09, "pct_jp_100": 63.91, "pct_fp_opt": 36.39, "pct_fp_pes": 35.8, "margen_error": 0.3}, {"departamento": "APURÍMAC", "avance": 99.0, "pct_fp_ya": 18.84, "pct_jp_ya": 81.16, "pct_fp_100": 18.81, "pct_jp_100": 81.19, "pct_fp_opt": 18.85, "pct_fp_pes": 18.78, "margen_error": 0.04}, {"departamento": "AREQUIPA", "avance": 99.2, "pct_fp_ya": 36.43, "pct_jp_ya": 63.57, "pct_fp_100": 36.4, "pct_jp_100": 63.6, "pct_fp_opt": 36.45, "pct_fp_pes": 36.36, "margen_error": 0.05}, {"departamento": "AYACUCHO", "avance": 87.5, "pct_fp_ya": 20.97, "pct_jp_ya": 79.03, "pct_fp_100": 20.89, "pct_jp_100": 79.11, "pct_fp_opt": 21.39, "pct_fp_pes": 20.39, "margen_error": 0.5}, {"departamento": "CAJAMARCA", "avance": 99.3, "pct_fp_ya": 33.24, "pct_jp_ya": 66.76, "pct_fp_100": 33.25, "pct_jp_100": 66.75, "pct_fp_opt": 33.29, "pct_fp_pes": 33.21, "margen_error": 0.04}, {"departamento": "CALLAO", "avance": 97.6, "pct_fp_ya": 65.61, "pct_jp_ya": 34.39, "pct_fp_100": 65.59, "pct_jp_100": 34.41, "pct_fp_opt": 65.67, "pct_fp_pes": 65.52, "margen_error": 0.08}, {"departamento": "CUSCO", "avance": 91.3, "pct_fp_ya": 22.18, "pct_jp_ya": 77.82, "pct_fp_100": 22.07, "pct_jp_100": 77.93, "pct_fp_opt": 22.42, "pct_fp_pes": 21.73, "margen_error": 0.35}, {"departamento": "HUANCAVELICA", "avance": 94.5, "pct_fp_ya": 18.61, "pct_jp_ya": 81.39, "pct_fp_100": 18.61, "pct_jp_100": 81.39, "pct_fp_opt": 18.88, "pct_fp_pes": 18.34, "margen_error": 0.27}, {"departamento": "HUÁNUCO", "avance": 96.5, "pct_fp_ya": 35.92, "pct_jp_ya": 64.08, "pct_fp_100": 35.84, "pct_jp_100": 64.16, "pct_fp_opt": 36.0, "pct_fp_pes": 35.68, "margen_error": 0.16}, {"departamento": "ICA", "avance": 99.1, "pct_fp_ya": 51.91, "pct_jp_ya": 48.09, "pct_fp_100": 51.94, "pct_jp_100": 48.06, "pct_fp_opt": 51.98, "pct_fp_pes": 51.89, "margen_error": 0.04}, {"departamento": "JUNÍN", "avance": 97.5, "pct_fp_ya": 45.08, "pct_jp_ya": 54.92, "pct_fp_100": 45.05, "pct_jp_100": 54.95, "pct_fp_opt": 45.12, "pct_fp_pes": 44.98, "margen_error": 0.07}, {"departamento": "LA LIBERTAD", "avance": 99.3, "pct_fp_ya": 57.53, "pct_jp_ya": 42.47, "pct_fp_100": 57.57, "pct_jp_100": 42.43, "pct_fp_opt": 57.58, "pct_fp_pes": 57.55, "margen_error": 0.02}, {"departamento": "LAMBAYEQUE", "avance": 99.6, "pct_fp_ya": 58.85, "pct_jp_ya": 41.15, "pct_fp_100": 58.85, "pct_jp_100": 41.15, "pct_fp_opt": 58.86, "pct_fp_pes": 58.84, "margen_error": 0.01}, {"departamento": "LIMA", "avance": 96.8, "pct_fp_ya": 63.5, "pct_jp_ya": 36.5, "pct_fp_100": 63.51, "pct_jp_100": 36.49, "pct_fp_opt": 63.6, "pct_fp_pes": 63.42, "margen_error": 0.09}, {"departamento": "LORETO", "avance": 65.0, "pct_fp_ya": 55.16, "pct_jp_ya": 44.84, "pct_fp_100": 54.5, "pct_jp_100": 45.5, "pct_fp_opt": 55.47, "pct_fp_pes": 53.5, "margen_error": 0.98}, {"departamento": "MADRE DE DIOS", "avance": 90.9, "pct_fp_ya": 31.67, "pct_jp_ya": 68.33, "pct_fp_100": 31.03, "pct_jp_100": 68.97, "pct_fp_opt": 31.1, "pct_fp_pes": 30.96, "margen_error": 0.07}, {"departamento": "MOQUEGUA", "avance": 99.7, "pct_fp_ya": 27.43, "pct_jp_ya": 72.57, "pct_fp_100": 27.44, "pct_jp_100": 72.56, "pct_fp_opt": 27.48, "pct_fp_pes": 27.41, "margen_error": 0.04}, {"departamento": "PASCO", "avance": 98.3, "pct_fp_ya": 39.24, "pct_jp_ya": 60.76, "pct_fp_100": 39.27, "pct_jp_100": 60.73, "pct_fp_opt": 39.39, "pct_fp_pes": 39.15, "margen_error": 0.12}, {"departamento": "PIURA", "avance": 98.7, "pct_fp_ya": 56.95, "pct_jp_ya": 43.05, "pct_fp_100": 57.0, "pct_jp_100": 43.0, "pct_fp_opt": 57.06, "pct_fp_pes": 56.95, "margen_error": 0.05}, {"departamento": "PUNO", "avance": 98.6, "pct_fp_ya": 13.52, "pct_jp_ya": 86.48, "pct_fp_100": 13.56, "pct_jp_100": 86.44, "pct_fp_opt": 13.61, "pct_fp_pes": 13.52, "margen_error": 0.04}, {"departamento": "SAN MARTÍN", "avance": 98.5, "pct_fp_ya": 45.43, "pct_jp_ya": 54.57, "pct_fp_100": 45.47, "pct_jp_100": 54.53, "pct_fp_opt": 45.54, "pct_fp_pes": 45.4, "margen_error": 0.07}, {"departamento": "TACNA", "avance": 98.7, "pct_fp_ya": 28.65, "pct_jp_ya": 71.35, "pct_fp_100": 28.68, "pct_jp_100": 71.32, "pct_fp_opt": 28.75, "pct_fp_pes": 28.61, "margen_error": 0.07}, {"departamento": "TUMBES", "avance": 99.7, "pct_fp_ya": 64.34, "pct_jp_ya": 35.66, "pct_fp_100": 64.37, "pct_jp_100": 35.63, "pct_fp_opt": 64.4, "pct_fp_pes": 64.35, "margen_error": 0.03}, {"departamento": "UCAYALI", "avance": 88.6, "pct_fp_ya": 53.36, "pct_jp_ya": 46.64, "pct_fp_100": 53.0, "pct_jp_100": 47.0, "pct_fp_opt": 53.46, "pct_fp_pes": 52.54, "margen_error": 0.46}, {"departamento": "ÁNCASH", "avance": 98.6, "pct_fp_ya": 43.4, "pct_jp_ya": 56.6, "pct_fp_100": 43.38, "pct_jp_100": 56.62, "pct_fp_opt": 43.44, "pct_fp_pes": 43.32, "margen_error": 0.06}];
+let cs='dep';
+function avC(a){return a>90?'#10B981':a>70?'#F59E0B':'#EF4444';}
 function setView(v,btn){
-  cv=v;document.querySelectorAll('.tbtn:not(.eon):not(.eoff)').forEach(b=>{b.className='tbtn '+(b===btn?'on':'off');});
+  document.querySelectorAll('.tbtn:not(.eon):not(.eoff)').forEach(b=>{b.className='tbtn '+(b===btn?'on':'off');});
   const inf=v==='inferido';
   document.getElementById('errBtn').style.display=inf?'':'none';
   document.getElementById('mrowEl').style.display=inf?'flex':'none';
-  if(inf&&se)document.getElementById('errWrap').style.display='';
-  else document.getElementById('errWrap').style.display='none';
-  const fp=inf?50.38:50.035,jp=inf?49.62:49.965;
+  document.getElementById('errWrap').style.display='none';
+  const fp=inf?50.14:50.035,jp=inf?49.86:49.965;
   document.getElementById('bFP').style.width=fp+'%';document.getElementById('bJP').style.width=jp+'%';
-  document.getElementById('bFPlbl').textContent=fp.toFixed(2)+'%';document.getElementById('bJPlbl').textContent=jp.toFixed(2)+'%';
-  renderT();
+  document.getElementById('bFPlbl').textContent=fp+'%';document.getElementById('bJPlbl').textContent=jp+'%';
+  document.getElementById('projFP').textContent=fp+'%';document.getElementById('projJP').textContent=jp+'%';
 }
-function toggleErr(btn){se=!se;btn.className='tbtn '+(se?'eon':'eoff');document.getElementById('errWrap').style.display=se?'':'none';}
-function setTV(v,btn){cv=v;document.querySelectorAll('.vbtn').forEach(b=>b.classList.toggle('on',b===btn));renderT();}
+function toggleErr(btn){
+  const show=btn.className.includes('eoff');
+  btn.className='tbtn '+(show?'eon':'eoff');
+  document.getElementById('errWrap').style.display=show?'':'none';
+}
 function sortT(s,btn){cs=s;document.querySelectorAll('.sbtn').forEach(b=>b.classList.toggle('on',b===btn));renderT();}
-function avC(a){return a>90?'#10B981':a>70?'#F59E0B':'#EF4444';}
 function renderT(){
   const data=[...DEPS].sort((a,b)=>{
-    if(cs==='dep')return a.dep.localeCompare(b.dep);
+    if(cs==='dep')return a.departamento.localeCompare(b.departamento);
     if(cs==='avance')return b.avance-a.avance;
-    if(cs==='fp')return b.fp_100-a.fp_100;
-    if(cs==='jp')return b.jp_100-a.jp_100;
-    if(cs==='err')return b.me-a.me;
+    if(cs==='fp')return b.pct_fp_100-a.pct_fp_100;
+    if(cs==='jp')return b.pct_jp_100-a.pct_jp_100;
+    if(cs==='err')return b.margen_error-a.margen_error;
     return 0;
   });
-  const inf=cv==='inferido';
   document.getElementById('tbody').innerHTML=data.map((d,i)=>{
-    const fp=inf?d.fp_100:d.fp_ya,jp=inf?d.jp_100:d.jp_ya;
-    const fpW=fp>jp,tight=inf&&Math.abs(fp-jp)<d.me*2;
-    const cls=tight?'tight':(i%2===0?'even':'odd');
-    return`<tr class="${cls}">
-      <td><span class="dn">${tight?'⚠️ ':''}<b>${d.dep}</b></span></td>
-      <td><div class="ac"><div class="ab"><div class="af" style="width:${d.avance}%;background:${avC(d.avance)}"></div></div><span class="an">${d.avance}%</span></div></td>
-      <td><span class="pfp">${fp.toFixed(2)}%</span></td>
-      <td><span class="pjp">${jp.toFixed(2)}%</span></td>
-      <td><span class="badge ${fpW?'fp':'jp'}">${fpW?'FP':'JP'} +${Math.abs(fp-jp).toFixed(1)}pp</span></td>
-      <td style="min-width:75px"><div class="sbar sm"><div class="bfp" style="width:${fp}%"></div><div class="bjp" style="width:${jp}%"></div></div></td>
-      <td>${inf?`<span class="ecell ${d.me>1?'ehi':'elo'}">±${d.me.toFixed(2)}pp</span>`:'<span style="color:#ccc;font-size:11px">—</span>'}</td>
+    const fp=d.pct_fp_100,jp=d.pct_jp_100,fpW=fp>jp;
+    const tight=Math.abs(fp-jp)<d.margen_error*2;
+    return`<tr style="border-top:1px solid #F3F4F6;background:${tight?'#FFFBEB':i%2===0?'#fff':'#FAFAFA'}">
+      <td style="padding:8px 12px;font-size:12px;font-weight:600">${tight?'⚠️ ':''}${d.departamento}</td>
+      <td style="padding:8px 12px;text-align:center"><div style="display:inline-flex;align-items:center;gap:5px"><div style="width:38px;height:5px;background:#E5E7EB;border-radius:3px;overflow:hidden"><div style="width:${d.avance}%;height:100%;background:${avC(d.avance)}"></div></div><span style="font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#374151">${d.avance}%</span></div></td>
+      <td style="padding:8px 12px;text-align:center;font-family:IBM Plex Mono,monospace;font-weight:800;font-size:12px;color:#C0392B">${d.pct_fp_ya.toFixed(2)}%</td>
+      <td style="padding:8px 12px;text-align:center;font-family:IBM Plex Mono,monospace;font-weight:800;font-size:12px;color:#1A56A0">${d.pct_jp_ya.toFixed(2)}%</td>
+      <td style="padding:8px 12px;text-align:center;font-family:IBM Plex Mono,monospace;font-weight:800;font-size:12px;color:#C0392B">${fp.toFixed(2)}%</td>
+      <td style="padding:8px 12px;text-align:center;font-family:IBM Plex Mono,monospace;font-weight:800;font-size:12px;color:#1A56A0">${jp.toFixed(2)}%</td>
+      <td style="padding:8px 12px;text-align:center"><span style="background:${fpW?'#FDECEA':'#E3EEFF'};color:${fpW?'#C0392B':'#1A56A0'};padding:3px 8px;border-radius:10px;font-family:IBM Plex Mono,monospace;font-size:10px;font-weight:800">${fpW?'FP':'JP'} +${Math.abs(fp-jp).toFixed(1)}pp</span></td>
+      <td style="padding:8px 12px;min-width:80px"><div style="display:flex;height:13px;border-radius:4px;overflow:hidden"><div style="width:${fp}%;background:#C0392B"></div><div style="width:${jp}%;background:#1A56A0"></div></div></td>
+      <td style="padding:8px 12px;text-align:center;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:${d.margen_error>1?'#D97706':'#9CA3AF'}">±${d.margen_error.toFixed(2)}pp</td>
     </tr>`;
   }).join('');
 }
-// Ring arc
 const r=55,c=2*Math.PI*r;
-document.getElementById('ringArc').setAttribute('stroke-dasharray',`${93.481/100*c} ${c}`);
+document.getElementById('ringArc').setAttribute('stroke-dasharray',`${(93.481/100*c).toFixed(1)} ${c.toFixed(1)}`);
 renderT();
 </script>
 </body>
