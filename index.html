@@ -13,7 +13,7 @@ header{background:var(--dark);color:#fff;padding:14px 20px;display:flex;align-it
 .h-title{font-family:"Bebas Neue",sans-serif;font-size:22px;letter-spacing:1px;}
 main{max-width:1200px;margin:0 auto;padding:16px 14px 48px;}
 .alert{border-radius:10px;padding:11px 16px;margin-bottom:14px;display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.5;}
-.aw{background:#FEF3C7;border:1px solid #FCD34D;color:#92400E;}.ag{background:#ECFDF5;border:1px solid #6EE7B7;color:#065F46;}
+.ag{background:#ECFDF5;border:1px solid #6EE7B7;color:#065F46;}
 .top-grid{display:grid;grid-template-columns:148px 1fr;gap:14px;margin-bottom:14px;}
 @media(max-width:580px){.top-grid{grid-template-columns:1fr;}}
 .ring-card{background:var(--dark);border-radius:14px;padding:20px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
@@ -127,7 +127,7 @@ td:first-child{text-align:left;}
   <div style="text-align:right"><div style="font-size:9px;color:#6B7280;font-family:IBM Plex Mono,monospace">Actas contabilizadas</div><div style="font-family:IBM Plex Mono,monospace;font-size:11px;color:#E5E7EB">91,132 de 92,766 actas</div></div>
 </header>
 <main>
-  <div class="alert ag"><span style="font-size:18px">✅</span><div><strong>FP lidera el conteo real (50.002%) y la proyección (50.14%).</strong> Con el exterior cerrado y el rango real de Keiko en <strong>[50.0%–50.29%]</strong>, FP supera el 50% en todos los escenarios posibles. Solo el JNE proclama.</div></div>
+  <div class="alert ag"><span style="font-size:18px">✅</span><div><strong>FP lidera el conteo real (50.002%) y la proyección (50.14%).</strong> Rango: <strong>[50.002%–50.285%]</strong> — FP supera el 50% en todos los escenarios. Solo el JNE proclama.</div></div>
   <div class="top-grid">
     <div class="ring-card">
       <svg width="122" height="122">
@@ -147,12 +147,12 @@ td:first-child{text-align:left;}
       <div class="scores">
         <div class="sbox fp"><div class="slbl fp">KEIKO FUJIMORI · FP</div>
           <div class="dual-pct"><div class="dual-col ya"><div class="dual-lbl ya">YA CONTADO</div><div class="dual-num ya">50.002%</div></div><div class="dual-col proj"><div class="dual-lbl fp-proj">PROYECTADO</div><div class="dual-num fp" id="projFP">50.14%</div></div></div>
-          <div class="srange fp">Rango real: [50.0%, 50.29%]</div>
+          <div class="srange fp">Rango: [50.002%, 50.285%]</div>
           <div class="svotes">9,034,071 contados · 9,224,485 proy.</div>
         </div>
         <div class="sbox jp"><div class="slbl jp">ROBERTO SÁNCHEZ · JP</div>
           <div class="dual-pct"><div class="dual-col ya"><div class="dual-lbl ya">YA CONTADO</div><div class="dual-num ya">49.998%</div></div><div class="dual-col proj"><div class="dual-lbl jp-proj">PROYECTADO</div><div class="dual-num jp" id="projJP">49.86%</div></div></div>
-          <div class="srange jp">Rango real: [49.71%, 50.0%]</div>
+          <div class="srange jp">Rango: [49.715%, 49.998%]</div>
           <div class="svotes">9,033,312 contados · 9,173,594 proy.</div>
         </div>
       </div>
@@ -161,13 +161,13 @@ td:first-child{text-align:left;}
         <div class="bjp" id="bJP" style="width:49.998%"><span class="blbl" id="bJPlbl">49.998%</span></div>
       </div>
       <div class="err-wrap" id="errWrap" style="display:none">
-        <div class="err-track"></div><div class="err-band" style="left:50.0%;width:0.29%"></div>
+        <div class="err-track"></div><div class="err-band" style="left:50.002%;width:0.283%"></div>
         <div class="err-needle" style="left:50.14%"></div><div class="err-50" style="left:50%"></div>
-        <div class="err-lbls"><span>Mín FP: 50.0%</span><span>50%</span><span>Máx FP: 50.29%</span></div>
+        <div class="err-lbls"><span>Mín FP: 50.002%</span><span>50%</span><span>Máx FP: 50.285%</span></div>
       </div>
       <div class="mrow" id="mrowEl" style="display:none;margin-top:10px">
         <span><strong>Margen proyectado:</strong> <span class="vfp">+0.28pp</span></span>
-        <span><strong>Rango real FP:</strong> <span class="vgold">[50.0%–50.29%]</span></span>
+        <span><strong>Rango FP:</strong> <span class="vgold">[50.002%–50.285%]</span></span>
       </div>
     </div>
   </div>
@@ -182,16 +182,16 @@ td:first-child{text-align:left;}
     <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gold);margin-bottom:10px">Situación al 98.239% de avance — 11 Jun 2026 · 21:17 UTC</div>
     <p style="font-size:13px;color:#374151;line-height:1.75;margin-bottom:14px"><strong style="color:var(--fp)">Keiko Fujimori</strong> lidera el conteo real con <strong style="color:var(--fp)">50.002%</strong> (9,034,071 votos) frente al <strong style="color:var(--jp)">49.998%</strong> (9,033,312 votos) de <strong style="color:var(--jp)">Roberto Sánchez</strong> — <strong>759 votos</strong> de ventaja. El exterior cerró completamente. Solo quedan 11 actas ONPE en Selva y las impugnadas en JEE.</p>
     <div class="pend-grid">
-      <div class="pbox" style="border-left:3px solid #F59E0B"><div class="pbox-lbl" style="color:#F59E0B">🟡 IMPUGNADAS PERÚ — 1,623 actas</div><p>En revisión JEE. Mix proyectado ~57.4% FP. Incluso si se anulan todas, FP sigue ganando con 50.0%.</p></div>
+      <div class="pbox" style="border-left:3px solid #F59E0B"><div class="pbox-lbl" style="color:#F59E0B">🟡 IMPUGNADAS PERÚ — 1,623 actas</div><p>En revisión JEE. Mix proyectado ~57.4% FP. Incluso si se anulan todas, FP sigue ganando.</p></div>
       <div class="pbox" style="border-left:3px solid #EF4444"><div class="pbox-lbl" style="color:#EF4444">🔴 PENDIENTES ONPE PERÚ — 11 actas</div><p>Solo en Selva. Masa mínima — impacto marginal en el resultado.</p></div>
-      <div class="pbox" style="border-left:3px solid #10B981"><div class="pbox-lbl" style="color:#10B981">✅ EXTRANJERO — CONTEO CERRADO</div><p><strong>2,403 actas contabilizadas</strong>. FP obtuvo <strong style="color:var(--fp)">63.429%</strong>. Solo quedan 140 actas impugnadas en JEE.</p></div>
+      <div class="pbox" style="border-left:3px solid #10B981"><div class="pbox-lbl" style="color:#10B981">✅ EXTRANJERO — CONTEO CERRADO</div><p><strong>2,403 actas contabilizadas</strong>. FP obtuvo <strong style="color:var(--fp)">63.429%</strong>. Solo quedan 140 impugnadas en JEE.</p></div>
     </div>
     <div class="psumm"><div style="font-size:11px;color:var(--muted);margin-bottom:6px">Mix proyectado (~330,696 votos no contabilizados restantes)</div>
       <div class="sbar" style="height:22px"><div class="bfp" style="width:57.6%"><span class="blbl">57.6%</span></div><div class="bjp" style="width:42.4%"><span class="blbl">42.4%</span></div></div>
     </div>
     <div class="concl ok">
       <div class="concl-lbl">✅ Conclusión</div>
-      <p>Proyección al 100%: <strong>Keiko 50.14%</strong> / <strong>Sánchez 49.86%</strong>. Rango real FP: <strong>[50.0%–50.29%]</strong> — el piso 50.0% corresponde al escenario extremo en que se anulan el 100% de las impugnadas. FP supera el 50% en todos los escenarios posibles. <strong>Solo el JNE proclama al presidente electo.</strong></p>
+      <p>Proyección al 100%: <strong>Keiko 50.14%</strong> / <strong>Sánchez 49.86%</strong>. Rango: FP <strong>[50.002%–50.285%]</strong> · JP <strong>[49.715%–49.998%]</strong>. El piso de FP (50.002%) es el conteo ya verificado — el techo de JP (49.998%) es menor al 50% en todos los escenarios. <strong>La reversión es imposible. Solo el JNE proclama.</strong></p>
     </div>
   </div>
   <div class="section-card">
@@ -242,17 +242,17 @@ td:first-child{text-align:left;}
         </tr>
       </tbody>
     </table></div>
-    <div style="margin-top:10px;font-size:11px;color:var(--muted)">* Ext: 2366 actas válidas / 37 excluidas. Exterior ONPE cerrado al 100%. Solo 140 actas impugnadas en JEE.</div>
+    <div style="margin-top:10px;font-size:11px;color:var(--muted)">* Ext: 2366 actas válidas / 37 excluidas. ONPE exterior cerrado. Solo 140 actas impugnadas en JEE.</div>
   </div>
   <div class="section-card"><div class="sec-title">📐 Metodología</div><div class="steps">
     <div class="step"><div class="step-n"><span>01</span></div><div><div class="step-t">Fuente de datos</div><div class="step-d">Scraping ONPE a nivel distrital. Snapshot más reciente por ubigeo.</div></div></div>
-    <div class="step"><div class="step-n"><span>02</span></div><div><div class="step-t">Separación explícita de actas</div><div class="step-d">Cuadratura: 91,132+1,623+11=92,766 ✓. <span style="color:#F59E0B;font-weight:600">1,623 impugnadas (JEE)</span> y <span style="color:#EF4444;font-weight:600">11 pendientes ONPE</span> separados.</div></div></div>
+    <div class="step"><div class="step-n"><span>02</span></div><div><div class="step-t">Separación explícita de actas</div><div class="step-d">Cuadratura: 91,132+1,623+11=92,766 ✓.</div></div></div>
     <div class="step"><div class="step-n"><span>03</span></div><div><div class="step-t">Mix de preferencia (Perú)</div><div class="step-d">Mix distrital propio → provincial → nacional.</div></div></div>
-    <div class="step"><div class="step-n"><span>04</span></div><div><div class="step-t">Proyección al 100% (Perú)</div><div class="step-d">votos_proy = votos_cont / (actas_pct/100). Sin actas: total_actas × VPA_prov. VPA Perú: 200.35.</div></div></div>
-    <div class="step"><div class="step-n"><span>05</span></div><div><div class="step-t">Voto extranjero — Cerrado al 100%</div><div class="step-d">2366 actas válidas contabilizadas (37 excluidas). Mix final FP=63.429%. Solo 140 actas impugnadas en JEE.</div></div></div>
-    <div class="step"><div class="step-n"><span>06</span></div><div><div class="step-t">Rango real de FP [50.0%–50.29%]</div><div class="step-d">Piso 50.0% = escenario extremo donde se anulan el 100% de impugnadas. Techo 50.29% = todas validadas con mix favorable. FP supera el 50% en ambos extremos.</div></div></div>
+    <div class="step"><div class="step-n"><span>04</span></div><div><div class="step-t">Proyección al 100% (Perú)</div><div class="step-d">votos_proy = votos_cont / (actas_pct/100). VPA Perú: 200.35.</div></div></div>
+    <div class="step"><div class="step-n"><span>05</span></div><div><div class="step-t">Voto extranjero — Cerrado al 100%</div><div class="step-d">2366 actas válidas. Mix final FP=63.429%. Solo 140 actas impugnadas en JEE.</div></div></div>
+    <div class="step"><div class="step-n"><span>06</span></div><div><div class="step-t">Rango [50.002%–50.285%]</div><div class="step-d">Piso 50.002% = conteo ya verificado (irreversible). Techo 50.285% = todas las impugnadas validadas con mix favorable. JP no supera el 50% en ningún escenario — techo JP = 49.998%.</div></div></div>
   </div></div>
-  <div class="tcard"><div class="thead-row"><div class="ttitle">Resultados por Departamento</div><div style="display:flex;gap:6px;flex-wrap:wrap"><button class="sbtn on" onclick="sortT('dep',this)">Nombre</button><button class="sbtn" onclick="sortT('avance',this)">Avance</button><button class="sbtn" onclick="sortT('fp100',this)">FP% proy.</button><button class="sbtn" onclick="sortT('jp100',this)">JP% proy.</button><button class="sbtn" onclick="sortT('err',this)">Error</button><button class="sbtn" onclick="sortT('imp',this)">Impugnadas</button></div></div>
+  <div class="tcard"><div class="thead-row"><div class="ttitle">Resultados por Departamento</div><div style="display:flex;gap:6px;flex-wrap:wrap"><button class="sbtn on" onclick="sortT('dep',this)">Nombre</button><button class="sbtn" onclick="sortT('avance',this)">Avance</button><button class="sbtn" onclick="sortT('fp100',this)">FP%</button><button class="sbtn" onclick="sortT('jp100',this)">JP%</button><button class="sbtn" onclick="sortT('err',this)">Error</button><button class="sbtn" onclick="sortT('imp',this)">Impugnadas</button></div></div>
     <div class="twrap"><table><thead><tr>
       <th rowspan="2" style="text-align:left;vertical-align:middle">Departamento</th>
       <th rowspan="2" style="vertical-align:middle">Avance</th>
@@ -288,7 +288,7 @@ td:first-child{text-align:left;}
       <div class="q-box"><div class="q-lbl">Ventaja proyectada FP</div><div class="q-val actual">50,891</div><div class="q-sub">votos sobre JP en proyección</div></div>
       <div class="q-box"><div class="q-lbl">Actas pend. ONPE exterior</div><div class="q-val green">0</div><div class="q-sub">Conteo exterior cerrado ✓</div></div>
     </div>
-    <div class="q-note">El exterior terminó de contabilizarse. FP obtuvo 63.429% en el exterior — decisivo para la proyección final. La ventaja acumulada de FP es <strong style="color:var(--gold)">50,891 votos</strong>. Solo quedan 11 actas ONPE en Selva y 1,623 actas impugnadas en revisión del JEE.</div>
+    <div class="q-note">El exterior terminó de contabilizarse. FP obtuvo 63.429% en el exterior. Ventaja acumulada: <strong style="color:var(--gold)">50,891 votos</strong>. Quedan solo 11 actas ONPE en Selva y 1,623 actas impugnadas en JEE.</div>
   </div>
     <div class="section-card" style="background:#F8F7FF;border:1px solid #DDD6FE;">
     <div class="sec-title" style="color:#5B21B6">⚖️ Ejercicio: Escenarios de validación de actas impugnadas</div>
@@ -374,7 +374,7 @@ td:first-child{text-align:left;}
   </div>
   <div class="fnotes">
     <div class="fgrid">
-      <div class="fn blue"><div class="fn-lbl">✓ FUENTE Y VALIDACIÓN</div><p>Scraping ONPE 11 Jun 2026 · 21:17 UTC. Cuadratura ✓: 91,132+1,623+11=92,766. VPA Perú: 200.35. Rango real FP [50.0%–50.29%] basado en escenarios de impugnadas.</p></div>
+      <div class="fn blue"><div class="fn-lbl">✓ FUENTE Y VALIDACIÓN</div><p>Scraping ONPE 11 Jun 2026 · 21:17 UTC. Cuadratura ✓: 91,132+1,623+11=92,766. VPA Perú: 200.35. Rango FP [50.002%–50.285%] · Rango JP [49.715%–49.998%]. JP no supera 50% en ningún escenario.</p></div>
       <div class="fn yellow"><div class="fn-lbl">⚠️ ADVERTENCIA</div><p>Quedan 1,623 actas impugnadas Perú + 140 ext en revisión JEE. Solo el JNE proclama al presidente electo tras resolver las impugnaciones.</p></div>
     </div>
   </div>
